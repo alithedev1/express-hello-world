@@ -11,8 +11,8 @@ const io = socketIo(server);
 
 app.get('/data', (req, res) => {
   res.send({
-    name: Ali,
-    age : 20
+    name: 'Ali',
+    age : '20'
   })
 })
 
