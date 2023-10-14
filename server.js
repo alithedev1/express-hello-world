@@ -9,6 +9,13 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
+app.get('/data', (req, res) => {
+  res.send({
+    name: Ali,
+    age : 20
+  })
+})
+
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
