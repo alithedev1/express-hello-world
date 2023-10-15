@@ -15,9 +15,9 @@ const dbName = 'World';
 const collectionName = 'People';
 
 app.use(cors());
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
-app.get('/', async (req, res) => {
+app.get('/people', async (req, res) => {
   try {
       // Connect to the MongoDB server
       await client.connect();
